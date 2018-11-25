@@ -1,0 +1,512 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Exercice 1 Palindrome"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Entrez un mot : rotor\n",
+      "Ceci est un palindrome.\n"
+     ]
+    },
+    {
+     "data": {
+      "text/plain": [
+       "'if i == len(\" \") and j [0] == [-1] :\\n    print(\"Ceci est un palindrome.\")\\nelse :\\n    print(\"Ceci n\\'est pas un palindrome\")'"
+      ]
+     },
+     "execution_count": 1,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "#Tester un mot type palindrome (chaîne de caractère)\n",
+    "#Lire un mot de droite à gauche et de gauche à droite \n",
+    "\n",
+    "mot = input('Entrez un mot : ')\n",
+    "\n",
+    "if mot[0] == mot[-1] and mot[::-1] == mot[::]:\n",
+    "    print(\"Ceci est un palindrome.\")\n",
+    "\n",
+    "else :\n",
+    "    print(\"Ceci n'est pas un palindrome.\")\n",
+    "\n",
+    "\n",
+    "\"\"\"if i == len(\" \") and j [0] == [-1] :\n",
+    "    print(\"Ceci est un palindrome.\")\n",
+    "else :\n",
+    "    print(\"Ceci n'est pas un palindrome\")\"\"\"\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "B\n"
+     ]
+    }
+   ],
+   "source": [
+    "mot = \"Bonjour\"\n",
+    "\n",
+    "print(mot[0])"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "c\n"
+     ]
+    }
+   ],
+   "source": [
+    "mot = \"coloc\"\n",
+    "i = mot[-1]\n",
+    "print(i)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "dlrow olleh\n",
+      "<class 'str'>\n",
+      "<class 'str'>\n"
+     ]
+    }
+   ],
+   "source": [
+    "mot = 'hello world'\n",
+    "\n",
+    "print(mot[::-1])\n",
+    "\n",
+    "'hello world'[::-1]\n",
+    "\n",
+    "print(type(mot))\n",
+    "\n",
+    "print(type('hello world'))"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "OK\n"
+     ]
+    }
+   ],
+   "source": [
+    "prenom = 'Isleme'\n",
+    "\n",
+    "if prenom == 'Isleme' :\n",
+    "    print('OK')\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Exercice 2 Lancé de dé"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "6\n",
+      "5\n",
+      "6\n",
+      "5\n",
+      "5\n",
+      "[6, 5, 6, 5, 5]\n",
+      "27\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Générer 5 nombres aléatoires compris entre 1:6\n",
+    "#Montrer chaque lancé\n",
+    "#En faire la somme \n",
+    "#Afficher le nombre \n",
+    "\n",
+    "import random\n",
+    "\n",
+    "lancé_1 = random.randint(1,6)\n",
+    "#print(lancé_1) \n",
+    "\n",
+    "lancé_2 = random.randint(1,6)\n",
+    "#print(lancé_2) \n",
+    "\n",
+    "lancé_3 = random.randint(1,6)\n",
+    "#print(lancé_3) \n",
+    "\n",
+    "lancé_4 = random.randint(1,6)\n",
+    "#print(lancé_4) \n",
+    "\n",
+    "lancé_5 = random.randint(1,6)\n",
+    "#print(lancé_5) \n",
+    "\n",
+    "#print(lancé_1 + lancé_2 + lancé_3 + lancé_4 + lancé_5)\n",
+    "\n",
+    "#Boucle car plus propre \n",
+    "\n",
+    "Lance = list()\n",
+    "i = 0\n",
+    "for i in range(5):\n",
+    "    de = random.randint(1,6) #lancé aleatoire \n",
+    "    Lance.append(de) #ajoute à ma liste ou Lance.append(random.randit(1,6))\n",
+    "    print(de) #montre\n",
+    "print(Lance)\n",
+    "j = 0 \n",
+    "res = 0\n",
+    "for j in range(len(Lance)):      #fonction qui donne la taille de ce qu'elle contient \n",
+    "    res = res+Lance[j]\n",
+    "    \n",
+    "print(res)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Exercice 3 Calcul moyenne"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "# Recuperer la note\n",
+    "# Stocker la note\n",
+    "# Calculer la moyenne\n",
+    "\n",
+    "\n",
+    "\"\"\"calcul_moyenne = input(\"Entrez les notes de chaque étudiant : \")\n",
+    "\n",
+    "if calcul_moyenne <= 20 and calcul_moyenne >= 0 :\n",
+    "    \n",
+    "    print('OK')\n",
+    "    \n",
+    "else :\n",
+    "    \n",
+    "    print('TI FOU MA GUEULE')\"\"\"\n",
+    "\n",
+    "    \n",
+    "    \n",
+    "    \n",
+    "    \n",
+    "\"\"\"note = {\" \": [  ,  ,  ,  ,  ], ** }\n",
+    "\n",
+    "moyenne = sorted(note.values()) + **\n",
+    "\n",
+    "print(moyenne)\"\"\"\n",
+    "\n",
+    "\n",
+    "#etudiant = input (\"Entrez nom étudiant\")\n",
+    "#note = len([ ])\n",
+    "#nom\n",
+    "\n",
+    "\n",
+    "#Etudiant = dict()\n",
+    "#Etudiants = [ ]\n",
+    "\n",
+    "#Construire le dico :\n",
+    "\n",
+    "#nom = input('Entrez le nom de l\\'etudiant)\n",
+    "#Etudiant['nom'] = nom\n",
+    "\n",
+    "# Etudiants.append(Etudiant)\n",
+    "\n",
+    "etudiants = list()\n",
+    "cont = \"Oui\"\n",
+    "while cont==\"Oui\": \n",
+    "    etudiant = input(\"Entrer le nom \")\n",
+    "    notes = list()\n",
+    "    i = 0\n",
+    "    for i in range(5):\n",
+    "        note = input(\"Entrez la note \") # note = int(input(\"Entrez la note\")) tu transformes un \"\" en int \n",
+    "        note = int(note)\n",
+    "        notes.append(note)\n",
+    "    \n",
+    "    somme = 0\n",
+    "    j = 0\n",
+    "    for j in range(len(notes)):\n",
+    "        somme = somme+notes[j]\n",
+    "    moyenne = somme/5\n",
+    "\n",
+    "    print(moyenne)\n",
+    "    etudiants.append(etudiant+\" : \" +str(moyenne))\n",
+    "    cont = input(\"Voulez-vous continuer ? Oui/ Non\")\n",
+    "    \n",
+    "print(etudiants)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Entrez le nom de l'etudiantDURQND\n",
+      "{'nom': 'DURQND'}\n",
+      "[{'nom': 'DURQND'}]\n",
+      "{'nom': 'DURQND'}\n"
+     ]
+    }
+   ],
+   "source": [
+    "Etudiant = dict()\n",
+    "Etudiants = [ ]\n",
+    "\n",
+    "#Construire le dico :\n",
+    "\n",
+    "nom = input('Entrez le nom de l\\'etudiant ')\n",
+    "Etudiant['nom'] = nom\n",
+    "\n",
+    "print(Etudiant)\n",
+    "\n",
+    "Etudiants.append(Etudiant)\n",
+    "\n",
+    "print(Etudiants)\n",
+    "\n",
+    "print(Etudiants[0])"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Exercice 4 Td "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0 : 0\n",
+      "0 : 1\n",
+      "0 : 2\n",
+      "1 : 0\n",
+      "1 : 1\n",
+      "1 : 2\n",
+      "1 : 3\n",
+      "2 : 0\n",
+      "2 : 1\n",
+      "2 : 2\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Matrice Python \n",
+    "\n",
+    "def indice(tab2d):\n",
+    "    i = 0\n",
+    "    j = 0\n",
+    "    for i in range(len(tab2d)):\n",
+    "        for j in range(len(tab2d[i])):\n",
+    "            print(str(i) + \" : \" +str(j))\n",
+    "            \n",
+    "#indices([[1,2,3],[4,5,6,7],[8,9,10]])\n",
+    "#def sommeImpairs(tab2d):\n",
+    "\n",
+    "def indices(tab2d):\n",
+    "    i = 0\n",
+    "    while i<len(tab2d): \n",
+    "        j = 0\n",
+    "        while j<len(tab2d[i]):\n",
+    "            print(str(i) + \" : \" +str(j))\n",
+    "            j = j+1\n",
+    "        i = i+1\n",
+    "indices([[1,2,3],[4,5,6,7],[8,9,10]])\n",
+    "        \n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "25\n"
+     ]
+    }
+   ],
+   "source": [
+    "def sommeImpairs(tab2d):\n",
+    "    i = 0\n",
+    "    j = 0\n",
+    "    total = 0\n",
+    "    for i in range(len(tab2d)):\n",
+    "        for j in range(len(tab2d[i])):\n",
+    "            if(tab2d[i][j])%2!=0:\n",
+    "                total = total+tab2d[i][j]\n",
+    "    return(total)\n",
+    "\n",
+    "print(sommeImpairs([[1,2,3],[4,5,6,7],[8,9,10]]))\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Exercice 7 Transposition "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "[[1, 4, 8], [2, 5, 9], [3, 6, 10]]\n",
+      "[[ 1  4  8]\n",
+      " [ 2  5  9]\n",
+      " [ 3  6 10]]\n"
+     ]
+    }
+   ],
+   "source": [
+    "def transpo(matrix):\n",
+    "    i = 0\n",
+    "    matrix_out = list()\n",
+    "    while i <len(matrix):\n",
+    "        j = 0\n",
+    "        buff = list()\n",
+    "        while j <len(matrix[i]):\n",
+    "            buff.append(matrix[j][i])\n",
+    "            j = j+1\n",
+    "        matrix_out.append(buff)\n",
+    "        i = i+1\n",
+    "    return(matrix_out)\n",
+    "\n",
+    "print(transpo([[1,2,3],[4,5,6],[8,9,10]]))\n",
+    "\n",
+    "import numpy as np\n",
+    "print(np.transpose([[1,2,3],[4,5,6],[8,9,10]]))"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Exercie 6 Année Bissextile "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "L'année est bissextile ! \n"
+     ]
+    }
+   ],
+   "source": [
+    "def annee_bissextile(annee):\n",
+    "    if((annee%4==0) and (annee%100!=0)) or (annee%400==0):\n",
+    "        print(\"L'année est bissextile ! \")\n",
+    "    else :\n",
+    "        print(\"Elle ne l'est pas !\")\n",
+    "annee_bissextile(2000)\n",
+    "\n",
+    "#année biss si elle est divisible par 4 mais pas par 100 sauf si elle est divible par 400\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Exercice 8 Fibonacci"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.7.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
